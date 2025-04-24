@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 function App() {
   React.useEffect(() => {
-    document.title = "AutomateIA | Simplificá tu negocio digital";
+    document.title = "PoxonAI | Simplificá tu negocio digital";
   }, []);
 
   return (
