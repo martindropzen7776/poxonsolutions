@@ -17,7 +17,7 @@ const Pricing: React.FC = () => {
                 <BookOpen className="w-12 h-12 text-cyan-300" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-center">Pack Completo + Manual Detallado</h3>
-              <p className="text-center text-purple-200 mb-6">Todo lo que necesitás para automatizar tu negocio</p>
+              <p className="text-center text-purple-200 mb-6">Todo lo que necesitás para automatizar tu negocio y aprender nuevas cosas</p>
               
               <div className="flex items-baseline justify-center mb-8">
                 <span className="text-sm line-through opacity-75">$49.99 USD</span>
@@ -39,7 +39,7 @@ const Pricing: React.FC = () => {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 mr-3 flex-shrink-0 mt-0.5 text-cyan-300" />
-                  <span>+10 automatizaciones listas para implementar hoy mismo</span>
+                  <span> +50GPTS +10 automatizaciones listas para implementar hoy mismo</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 mr-3 flex-shrink-0 mt-0.5 text-cyan-300" />
