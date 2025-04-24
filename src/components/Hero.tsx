@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl sm:text-2xl text-purple-100 mb-8">
-            Pack completo de <span className="font-bold text-cyan-300">+10 automatizaciones</span> que harán crecer tu negocio mientras dormís
+            Pack completo de <span className="font-bold text-cyan-300">+50GPTS +10 automatizaciones</span> que harán crecer tu negocio mientras dormís
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 max-w-3xl mx-auto">
