@@ -3,33 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing TikTok</title>
+  <title>Diversión Online</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #000; /* Fondo negro TikTok */
+      background: #000; /* Estilo TikTok */
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       height: 100vh;
-      font-family: 'Arial Black', sans-serif;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #ff0050, #00f2ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 30px 0;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    ul li::before {
+      content: "✅ ";
+      color: #00f2ea;
     }
 
     .btn {
       position: relative;
       background: linear-gradient(45deg, #ff0050, #00f2ea);
       color: #fff;
-      font-size: 28px;
+      font-size: 22px;
       font-weight: bold;
-      padding: 22px 60px;
+      padding: 18px 50px;
       border-radius: 50px;
       border: none;
       cursor: pointer;
       overflow: hidden;
       text-transform: uppercase;
       letter-spacing: 1px;
-      box-shadow: 0 0 25px rgba(255, 0, 80, 0.7), 0 0 25px rgba(0, 242, 234, 0.7);
+      box-shadow: 0 0 25px rgba(255, 0, 80, 0.6), 0 0 25px rgba(0, 242, 234, 0.6);
       transition: transform 0.2s ease-in-out;
     }
 
@@ -37,7 +61,6 @@
       transform: scale(1.1);
     }
 
-    /* Brillo animado */
     .btn::before {
       content: "";
       position: absolute;
@@ -45,12 +68,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: linear-gradient(
-        120deg, 
-        transparent, 
-        rgba(255,255,255,0.4), 
-        transparent
-      );
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
       transform: rotate(25deg);
       animation: shine 2s infinite;
     }
@@ -59,11 +77,27 @@
       0% { transform: translateX(-100%) rotate(25deg); }
       100% { transform: translateX(100%) rotate(25deg); }
     }
+
+    .disclaimer {
+      font-size: 12px;
+      color: #999;
+      margin-top: 40px;
+      max-width: 300px;
+    }
   </style>
 </head>
 <body>
-  <button class="btn" onclick="window.location.href='https://tu-link.com'">
+  <h1>¡La diversión empieza aquí! 🎉</h1>
+  <ul>
+    <li>Fácil acceso en segundos</li>
+    <li>Experiencias únicas 24/7</li>
+    <li>Todo en un solo lugar</li>
+  </ul>
+
+  <button class="btn" onclick="window.location.href='https://wa.me/549XXXXXXXXX?text=Hola%20quiero%20divertirme'">
     Quiero divertirme
   </button>
+
+  <p class="disclaimer">Esta página es solo para entretenimiento. Para más información, contáctanos directamente.</p>
 </body>
 </html>
