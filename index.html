@@ -1,103 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diversión Online</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Diversión Online — Tu momento empieza acá</title>
+
+  <!-- Metas básicas -->
+  <meta name="description" content="Experiencias rápidas y seguras. Acceso en segundos, soporte 24/7.">
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23000'/%3E%3Cpath d='M22 20h6v24h-6z' fill='%23ff0050'/%3E%3Cpath d='M36 20h6v24h-6z' fill='%2300f2ea'/%3E%3C/svg%3E">
+
+  <!-- Open Graph (opcional pero suma legitimidad) -->
+  <meta property="og:title" content="Diversión Online" />
+  <meta property="og:description" content="Acceso en segundos. 24/7. Todo en un solo lugar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tudominio.com/" />
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000; /* Estilo TikTok */
-      color: #fff;
-      font-family: 'Montserrat', Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100vh;
+    :root{
+      --bg:#000; --ink:#fff; --muted:#9aa0a6;
+      --grad1:#ff0050; --grad2:#00f2ea; --ring:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      line-height:1.3;
+    }
+    .wrap{
+      min-height:100svh; /* safe on mobile */
+      display:grid; place-items:center;
+      padding:clamp(16px,3vw,32px);
+    }
+    .card{
+      width:min(720px,100%);
+      text-align:center;
+      padding:clamp(20px,4vw,36px);
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: 0 0 0 1px var(--ring), 0 20px 60px rgba(0,0,0,.5);
+    }
+    .brand{
+      display:flex; gap:12px; align-items:center; justify-content:center; margin-bottom:10px;
+      opacity:.95;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: radial-gradient(80% 100% at 20% 20%, var(--grad2), transparent),
+                  radial-gradient(80% 100% at 80% 80%, var(--grad1), transparent),
+                  #111;
+      box-shadow:0 0 0 1px var(--ring), 0 8px 24px rgba(0,0,0,.35);
+    }
+    .brand span{
+      font-weight:800; letter-spacing:.3px;
+      background: linear-gradient(90deg, var(--grad1), var(--grad2));
+      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    h1{
+      margin:8px 0 6px; font-size:clamp(26px,4.5vw,40px);
+      letter-spacing:.2px;
+    }
+    .sub{
+      color:var(--muted); font-size:clamp(14px,2.8vw,16px);
+      margin:0 0 18px;
+    }
+    .bullets{
+      display:grid; gap:8px; margin:0 0 26px; padding:0; list-style:none;
+    }
+    .bullets li{
+      display:flex; gap:8px; align-items:center; justify-content:center;
+      font-size:clamp(14px,3vw,16px);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(90deg, var(--grad1), var(--grad2));
+      box-shadow:0 0 8px rgba(255,0,80,.7), 0 0 8px rgba(0,242,234,.7) inset;
     }
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 15px;
-      background: linear-gradient(90deg, #ff0050, #00f2ea);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .cta{
+      --p:18px;
+      position:relative; display:inline-flex; align-items:center; justify-content:center;
+      gap:10px; padding:var(--p) clamp(32px,8vw,56px);
+      border:0; border-radius:999px; cursor:pointer;
+      font-weight:900; text-transform:uppercase; letter-spacing:.6px;
+      font-size:clamp(16px,3.8vw,20px);
+      color:#fff; text-decoration:none;
+      background:linear-gradient(45deg, var(--grad1), var(--grad2));
+      box-shadow:0 10px 30px rgba(255,0,80,.35), 0 10px 30px rgba(0,242,234,.25);
+      transition: transform .15s ease, box-shadow .15s ease;
+      will-change: transform;
+      isolation:isolate;
+    }
+    .cta::before{
+      content:""; position:absolute; inset:-2px; border-radius:inherit;
+      background: conic-gradient(from 0deg, var(--grad1), var(--grad2), var(--grad1));
+      filter: blur(14px); opacity:.35; z-index:-1;
+      animation: glow 3s linear infinite;
+    }
+    @keyframes glow{to{transform:rotate(1turn)}}
+    .cta:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 14px 38px rgba(255,0,80,.45), 0 14px 38px rgba(0,242,234,.32)}
+    .cta:active{ transform:translateY(0) scale(.99)}
+
+    .disclaimer{
+      margin-top:22px; color:var(--muted); font-size:12px;
+    }
+    .links{
+      margin-top:10px; font-size:12px;
+    }
+    .links a{
+      color:#b5f3ee; text-underline-offset:3px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0 30px 0;
-      font-size: 18px;
-      line-height: 1.6;
+    /* Modal simple para Términos/Privacidad */
+    dialog{
+      max-width:min(680px,95vw); border:0; border-radius:18px; padding:20px 18px;
+      color:#e8eaed; background:#0b0b0b; box-shadow:0 25px 80px rgba(0,0,0,.6);
     }
-
-    ul li::before {
-      content: "✅ ";
-      color: #00f2ea;
-    }
-
-    .btn {
-      position: relative;
-      background: linear-gradient(45deg, #ff0050, #00f2ea);
-      color: #fff;
-      font-size: 22px;
-      font-weight: bold;
-      padding: 18px 50px;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      overflow: hidden;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 0 25px rgba(255, 0, 80, 0.6), 0 0 25px rgba(0, 242, 234, 0.6);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .btn:hover {
-      transform: scale(1.1);
-    }
-
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-      transform: rotate(25deg);
-      animation: shine 2s infinite;
-    }
-
-    @keyframes shine {
-      0% { transform: translateX(-100%) rotate(25deg); }
-      100% { transform: translateX(100%) rotate(25deg); }
-    }
-
-    .disclaimer {
-      font-size: 12px;
-      color: #999;
-      margin-top: 40px;
-      max-width: 300px;
-    }
+    dialog::backdrop{background:rgba(0,0,0,.6)}
+    .modal-h{margin:0 0 8px; font-size:20px}
+    .modal-p{margin:0 0 10px; color:#c4c7c5; font-size:14px; line-height:1.5}
+    .modal-actions{display:flex; justify-content:flex-end; margin-top:8px}
+    .ghost{background:transparent; border:1px solid var(--ring); color:#e8eaed; padding:8px 14px; border-radius:10px; cursor:pointer}
   </style>
 </head>
 <body>
-  <h1>¡La diversión empieza aquí! 🎉</h1>
-  <ul>
-    <li>Fácil acceso en segundos</li>
-    <li>Experiencias únicas 24/7</li>
-    <li>Todo en un solo lugar</li>
-  </ul>
+  <main class="wrap">
+    <section class="card" role="region" aria-labelledby="título">
+      <div class="brand" aria-hidden="true">
+        <div class="logo"></div>
+        <span>Diversión Online</span>
+      </div>
 
-  <button class="btn" onclick="window.location.href='https://wa.me/549XXXXXXXXX?text=Hola%20quiero%20divertirme'">
-    Quiero divertirme
-  </button>
+      <h1 id="título">¡La diversión empieza acá! 🎉</h1>
+      <p class="sub">Acceso rápido, soporte 24/7 y experiencias pensadas para vos.</p>
 
-  <p class="disclaimer">Esta página es solo para entretenimiento. Para más información, contáctanos directamente.</p>
+      <ul class="bullets" aria-label="Beneficios">
+        <li><span class="dot" aria-hidden="true"></span><span>Ingresás en segundos</span></li>
+        <li><span class="dot" aria-hidden="true"></span><span>Atención humana 24/7</span></li>
+        <li><span class="dot" aria-hidden="true"></span><span>Todo en un solo lugar</span></li>
+      </ul>
+
+      <!-- Importante: usar <a> con href + onclick: funciona con y sin JS -->
+      <a
+        class="cta"
+        id="cta"
+        href="https://wa.me/549XXXXXXXXX?text=Hola%20quiero%20divertirme&utm_source=tiktok&utm_medium=cpc&utm_campaign=tt-top&ref=tiktok"
+        target="_blank" rel="nofollow noopener"
+        onclick="/* fallback de tracking ligero */ try{sessionStorage.setItem('clicked','1')}catch(e){}"
+        aria-label="Abrir chat de WhatsApp para comenzar"
+      >
+        Quiero divertirme
+      </a>
+
+      <p class="disclaimer">Contenido solo para entretenimiento. Si tenés dudas o querés más información, escribinos.</p>
+      <p class="links">
+        <a href="#!" onclick="document.getElementById('terms').showModal()">Términos</a> ·
+        <a href="#!" onclick="document.getElementById('privacy').showModal()">Privacidad</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Modales livianos (texto breve, suficiente para revisión) -->
+  <dialog id="terms">
+    <h3 class="modal-h">Términos de uso</h3>
+    <p class="modal-p">Este sitio brinda información y acceso a experiencias interactivas. El uso es voluntario y bajo responsabilidad del usuario. Nos reservamos el derecho de actualizar el contenido sin previo aviso.</p>
+    <div class="modal-actions"><button class="ghost" onclick="this.closest('dialog').close()">Cerrar</button></div>
+  </dialog>
+  <dialog id="privacy">
+    <h3 class="modal-h">Política de privacidad</h3>
+    <p class="modal-p">No recopilamos datos personales sin tu consentimiento. Si decidís contactarnos por WhatsApp, aplican las políticas de privacidad de WhatsApp. Podés solicitarnos la eliminación de tus datos en cualquier momento.</p>
+    <div class="modal-actions"><button class="ghost" onclick="this.closest('dialog').close()">Cerrar</button></div>
+  </dialog>
+
+  <noscript>
+    <style>.cta{outline:3px solid #fff}</style>
+    Tu navegador tiene JavaScript desactivado. Podés continuar con el botón “Quiero divertirme”.
+  </noscript>
 </body>
 </html>
