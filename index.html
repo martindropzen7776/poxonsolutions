@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Debt Relief Check</title>
+<title> Relief Check</title>
 
 <script type="text/javascript" src="https://trackrt.helpingpeoplegetahead.com/track.js"></script>
 
@@ -14,32 +14,39 @@
     box-sizing:border-box;
 }
 
+html, body{
+    min-height:100%;
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#071226;
+    background:#050b18;
     color:#fff;
 }
 
 .wrapper{
     min-height:100vh;
-    max-width:980px;
+    max-width:920px;
     margin:0 auto;
-    padding:18px;
+    padding:12px;
     text-align:center;
     background:
-        radial-gradient(circle at top, #173b85 0%, #071226 45%, #030712 100%);
+        radial-gradient(circle at top, #17458f 0%, #071226 42%, #020617 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .top-banner{
     background:#c40000;
     color:#fff;
-    font-size:22px;
+    font-size:17px;
     font-weight:900;
-    padding:14px 10px;
+    padding:10px;
     border-radius:8px;
     text-transform:uppercase;
-    margin-bottom:28px;
-    box-shadow:0 0 22px rgba(255,0,0,.45);
+    margin-bottom:14px;
+    box-shadow:0 0 18px rgba(255,0,0,.45);
 }
 
 .top-banner span{
@@ -47,49 +54,49 @@ body{
 }
 
 .headline{
-    font-size:56px;
-    line-height:1;
+    font-size:46px;
+    line-height:.95;
     font-weight:1000;
     text-transform:uppercase;
-    margin-bottom:18px;
+    margin-bottom:12px;
     text-shadow:0 4px 0 #000;
 }
 
-.headline strong{
-    display:block;
+.headline span{
     color:#ffe600;
-    font-size:64px;
+    display:block;
+    font-size:56px;
 }
 
 .subheadline{
-    font-size:24px;
+    font-size:19px;
     font-weight:800;
     max-width:760px;
-    margin:0 auto 26px;
-    line-height:1.3;
+    margin:0 auto 18px;
+    line-height:1.25;
 }
 
-.subheadline span{
+.subheadline strong{
     color:#7cff00;
 }
 
 .buttons{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:24px;
-    max-width:820px;
-    margin:0 auto 28px;
+    gap:14px;
+    max-width:760px;
+    width:100%;
+    margin:0 auto 16px;
 }
 
 .btn{
     border:none;
-    border-radius:24px;
-    padding:34px 10px 26px;
+    border-radius:20px;
+    padding:22px 8px 16px;
     color:#fff;
     cursor:pointer;
     font-weight:1000;
     text-transform:uppercase;
-    box-shadow:0 0 28px rgba(255,255,255,.15);
     transition:.2s;
 }
 
@@ -98,193 +105,194 @@ body{
 }
 
 .yes{
-    background:linear-gradient(180deg,#31ff00,#009a10);
-    border:5px solid #9cff8a;
-    box-shadow:0 0 28px rgba(49,255,0,.75);
+    background:linear-gradient(180deg,#38ff00,#009c13);
+    border:4px solid #a7ff94;
+    box-shadow:0 0 24px rgba(49,255,0,.7);
 }
 
 .no{
-    background:linear-gradient(180deg,#ff1d1d,#9b0000);
-    border:5px solid #ff9b9b;
-    box-shadow:0 0 28px rgba(255,0,0,.65);
+    background:linear-gradient(180deg,#ff2424,#9b0000);
+    border:4px solid #ff9b9b;
+    box-shadow:0 0 24px rgba(255,0,0,.65);
 }
 
 .icon{
-    width:76px;
-    height:76px;
-    border:6px solid #fff;
+    width:56px;
+    height:56px;
+    border:5px solid #fff;
     border-radius:50%;
-    margin:0 auto 14px;
+    margin:0 auto 10px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:48px;
+    font-size:36px;
     font-weight:1000;
 }
 
 .btn-main{
-    font-size:86px;
+    font-size:68px;
     line-height:.9;
 }
 
 .btn-small{
     display:inline-block;
-    margin-top:16px;
+    margin-top:10px;
     background:#050505;
     color:#ffe600;
-    padding:10px 18px;
+    padding:8px 12px;
     border-radius:8px;
-    font-size:22px;
+    font-size:15px;
     font-weight:1000;
-}
-
-.trust{
-    font-size:28px;
-    font-weight:1000;
-    margin:24px 0 12px;
-    text-transform:uppercase;
-}
-
-.trust span{
-    color:#ffe600;
-}
-
-.bullets{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-bottom:28px;
-    font-size:18px;
-    font-weight:800;
-}
-
-.bullets div{
-    background:rgba(255,255,255,.08);
-    padding:10px 14px;
-    border-radius:999px;
-}
-
-.bullets b{
-    color:#7cff00;
 }
 
 .qualify-box{
     background:#fff;
     color:#071226;
-    border-radius:14px;
-    padding:20px;
-    max-width:820px;
-    margin:0 auto 28px;
-    font-size:32px;
+    border-radius:12px;
+    padding:14px;
+    max-width:760px;
+    width:100%;
+    margin:0 auto 12px;
+    font-size:23px;
     font-weight:1000;
     text-transform:uppercase;
-    box-shadow:0 0 24px rgba(255,255,255,.25);
+    box-shadow:0 0 20px rgba(255,255,255,.22);
 }
 
 .qualify-box span{
     color:#d60000;
 }
 
-.benefits-title{
-    font-size:24px;
-    font-weight:1000;
-    text-transform:uppercase;
-    margin-bottom:18px;
-}
-
-.benefits{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-    max-width:820px;
-    margin:0 auto 30px;
-}
-
-.benefit{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:16px;
-    padding:18px 10px;
-    font-size:18px;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-.benefit span{
-    display:block;
-    font-size:34px;
-    margin-bottom:6px;
+.trust-row{
+    font-size:15px;
+    font-weight:800;
+    color:#e5e7eb;
+    margin-bottom:10px;
 }
 
 .loader{
     display:none;
-    font-size:24px;
+    font-size:22px;
     font-weight:900;
-    margin:18px 0;
     color:#ffe600;
+    margin-top:8px;
 }
 
 .footer{
     color:#cbd5e1;
-    font-size:13px;
-    line-height:1.5;
-    max-width:780px;
-    margin:20px auto 0;
+    font-size:11px;
+    line-height:1.35;
+    max-width:760px;
+    margin:8px auto 0;
 }
 
 @media(max-width:700px){
 
+    .wrapper{
+        padding:10px;
+        justify-content:flex-start;
+    }
+
     .top-banner{
-        font-size:15px;
+        font-size:13px;
+        padding:8px;
+        margin-bottom:10px;
     }
 
     .headline{
-        font-size:36px;
+        font-size:32px;
+        margin-bottom:10px;
     }
 
-    .headline strong{
-        font-size:44px;
+    .headline span{
+        font-size:40px;
     }
 
     .subheadline{
-        font-size:18px;
+        font-size:16px;
+        margin-bottom:14px;
     }
 
     .buttons{
-        gap:12px;
+        gap:10px;
+        margin-bottom:12px;
     }
 
     .btn{
         border-radius:16px;
-        padding:24px 6px 18px;
+        padding:18px 6px 14px;
     }
 
     .icon{
-        width:54px;
-        height:54px;
-        font-size:34px;
+        width:46px;
+        height:46px;
+        font-size:28px;
+        margin-bottom:8px;
     }
 
     .btn-main{
-        font-size:54px;
+        font-size:48px;
     }
 
     .btn-small{
-        font-size:13px;
-        padding:8px 10px;
-    }
-
-    .trust{
-        font-size:20px;
+        font-size:11px;
+        padding:7px 8px;
     }
 
     .qualify-box{
-        font-size:22px;
+        font-size:18px;
+        padding:12px;
     }
 
-    .benefits{
-        grid-template-columns:1fr;
+    .trust-row{
+        font-size:12px;
+    }
+
+    .footer{
+        font-size:10px;
+    }
+}
+
+@media(max-height:720px){
+
+    .top-banner{
+        margin-bottom:8px;
+    }
+
+    .headline{
+        font-size:30px;
+    }
+
+    .headline span{
+        font-size:38px;
+    }
+
+    .subheadline{
+        font-size:14px;
+        margin-bottom:10px;
+    }
+
+    .btn{
+        padding:14px 6px 10px;
+    }
+
+    .btn-main{
+        font-size:42px;
+    }
+
+    .icon{
+        width:40px;
+        height:40px;
+        font-size:24px;
+    }
+
+    .qualify-box{
+        font-size:16px;
+        padding:10px;
+    }
+
+    .footer{
+        display:none;
     }
 }
 </style>
@@ -295,27 +303,28 @@ body{
 <div class="wrapper">
 
     <div class="top-banner">
-        Thousands Of Americans Are <span>Checking Their Eligibility</span>
+        🇺🇸 U.S. Residents With Debt <span>May Qualify</span>
     </div>
 
     <h1 class="headline">
-        Are You In The U.S.
-        <strong>And Struggling With Debt You Can't Afford To Pay?</strong>
+        Is Debt Taking Over
+        <span>Your Paycheck?</span>
     </h1>
 
     <div class="subheadline">
-        Answer <span>YES</span> or <span>NO</span> to see if you may qualify for debt relief, lower payment, or hardship options.
+        Are you in the U.S. and struggling with debt you can’t afford to pay?
+        Tap <strong>YES</strong> or <strong>NO</strong> to check available options.
     </div>
 
     <div class="buttons">
 
-        <button class="btn yes" onclick="goOffer(this)">
+        <button class="btn yes" onclick="goOffer()">
             <div class="icon">✓</div>
             <div class="btn-main">YES</div>
-            <div class="btn-small">See If I May Qualify</div>
+            <div class="btn-small">Check Eligibility</div>
         </button>
 
-        <button class="btn no" onclick="goOffer(this)">
+        <button class="btn no" onclick="goOffer()">
             <div class="icon">×</div>
             <div class="btn-main">NO</div>
             <div class="btn-small">Not Right Now</div>
@@ -323,43 +332,16 @@ body{
 
     </div>
 
+    <div class="qualify-box">
+        People With <span>$10,000+</span> In Debt May Qualify
+    </div>
+
+    <div class="trust-row">
+        🔒 Confidential • ⚡ 60 Second Check • ✓ No Obligation
+    </div>
+
     <div class="loader" id="loader">
         Checking Eligibility...
-    </div>
-
-    <div class="trust">
-        Fast, Secure & <span>100% Confidential</span>
-    </div>
-
-    <div class="bullets">
-        <div><b>✓</b> No Obligation</div>
-        <div><b>✓</b> Takes Less Than 60 Seconds</div>
-        <div><b>✓</b> Qualifying Unsecured Debt</div>
-    </div>
-
-    <div class="qualify-box">
-        People With <span>$10,000+</span> In Debt May Qualify For Relief Options
-    </div>
-
-    <div class="benefits-title">
-        Why People Are Checking
-    </div>
-
-    <div class="benefits">
-        <div class="benefit">
-            <span>↓</span>
-            Lower Monthly Payments
-        </div>
-
-        <div class="benefit">
-            <span>✓</span>
-            Review Relief Options
-        </div>
-
-        <div class="benefit">
-            <span>☎</span>
-            Professional Support
-        </div>
     </div>
 
     <div class="footer">
@@ -371,12 +353,12 @@ body{
 <script>
 const OFFER_URL = "https://trackrt.helpingpeoplegetahead.com/click";
 
-function goOffer(element){
+function goOffer(){
     document.getElementById("loader").style.display = "block";
 
     setTimeout(function(){
         window.location.href = OFFER_URL;
-    }, 600);
+    }, 500);
 }
 </script>
 
